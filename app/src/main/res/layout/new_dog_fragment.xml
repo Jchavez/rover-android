@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/dogNameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/min_height"
+        android:fontFamily="sans-serif-light"
+        android:hint="@string/edit_text_hint"
+        android:inputType="textAutoComplete"
+        android:layout_margin="@dimen/big_padding"
+        android:textSize="18sp" />
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/dogPhotoPreviewView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp" />
+
+    <Button
+        android:id="@+id/capturePhotoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/capture_button"
+        android:layout_margin="@dimen/big_padding"
+        android:textColor="@color/buttonLabel" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="@string/button_save"
+        android:layout_margin="@dimen/big_padding"
+        android:textColor="@color/buttonLabel" />
+
+</LinearLayout>

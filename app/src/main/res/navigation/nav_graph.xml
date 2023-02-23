@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dogListFragment">
+
+    <fragment
+        android:id="@+id/dogListFragment"
+        android:name="com.rover.android.dog.view.fragment.DogListFragment"
+        tools:layout="@layout/dog_list_fragment" >
+        <action
+            android:id="@+id/action_dogList_to_newDog"
+            app:destination="@+id/newDogFragment" />
+        <action
+            android:id="@+id/action_dogList_to_dogItem"
+            app:destination="@+id/dogItemDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/dogItemDialogFragment"
+        android:name="com.rover.android.dog.view.fragment.DogItemDialogFragment"
+        tools:layout="@layout/dog_item_dialog_fragment" >
+        <argument
+            android:name="dogName"
+            app:argType="string" />
+        <argument
+            android:name="dogUri"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/newDogFragment"
+        android:name="com.rover.android.dog.view.fragment.NewDogFragment"
+        tools:layout="@layout/new_dog_fragment" />
+</navigation>
